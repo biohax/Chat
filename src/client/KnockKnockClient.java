@@ -1,3 +1,5 @@
+package client;
+
 import java.io.*;
 import java.net.*;
 
@@ -16,6 +18,10 @@ public class KnockKnockClient {
                     new BufferedReader(new InputStreamReader(System.in));
             String fromServer;
             String fromUser;
+
+            //Request: CONVREQ <id>
+            out.println("CONVREQ");
+
 
             while ((fromServer = in.readLine()) != null) {
                 System.out.println("Server: " + fromServer);
